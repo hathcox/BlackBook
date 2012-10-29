@@ -1,0 +1,36 @@
+<div class="nav-collapse">
+    <ul class="nav">
+        {% if uri == "/user" %}
+        	<li class="active">
+        {% else %}
+        	<li>
+        {% end %}
+        	<a href="/user">Home</a>
+        </li>
+        <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Password Cracking<b class="caret"></b></a>
+            <ul class="dropdown-menu">
+                <li><a href="/cracking/createjob">Create Job</a></li>
+                <li><a href="/cracking/queuedjobs">Queued Jobs</a></li>
+                <li><a href="/cracking/completedjobs">Completed Jobs</a></li>
+            </ul>
+        </li>
+        <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Entropy Analysis<b class="caret"></b></a>
+            <ul class="dropdown-menu">
+                <li><a href="/entropy/createjob">Create Job</a></li>
+                <li><a href="/entropy/queuedjobs">Queued Jobs</a></li>
+                <li><a href="/entropy/completedjobs">Completed Jobs</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+<div class="btn-group pull-right">
+    <a class="btn btn-primary" href="/settings"><i class="icon-user icon-white"></i>&nbsp;{{ user_name }}&nbsp;</a>
+    <a class="btn btn-primary dropdown-toggle" data-toggle="dropdown" href="#"><span class="caret"></span></a>
+    <ul class="dropdown-menu">
+            <li><a href="/settings"><i class="icon-pencil"></i>&nbsp;Settings&nbsp;</a></li>
+            <li class="divider"></li>
+            <li><a href="/logout"><i class="icon-ban-circle"></i>&nbsp;Logout&nbsp;</a></li>
+    </ul>
+</div>
